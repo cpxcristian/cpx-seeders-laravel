@@ -1,11 +1,11 @@
 # CPX Seeders
 
-Descripción:
-Olvídate de los db:seed que duplican registros o del miedo a correr seeders en producción. Este módulo añade una capa de seguimiento a tus seeders; si ya se ejecutó, no se vuelve a correr. Es el control de versiones que tus datos iniciales necesitaban.
+Description:
+Forget about db:seed that duplicate records or the fear of running seeders in production. This module adds a tracking layer to your seeders; if it has already been executed, it will not be run again. It is the version control that your initial data needed.
 
-El módulo está basado en la estructura de migraciones de laravel para que sea simple de entender.
+The module is based on the laravel migrations structure to make it simple to understand.
 
-## Lista de comandos:
+## List of commands:
 ```php artisan cpx-seed:install```\
 ```php artisan make:cpx-seeder <name>```\
 ```php artisan cpx-seed```\
@@ -14,29 +14,29 @@ El módulo está basado en la estructura de migraciones de laravel para que sea 
 ```php artisan cpx-migrate:fresh --seed```\
 ```php artisan cpx-migrate:status```
 
-### Equivalencia de comandos:
-#### Comandos de seeders:
-&nbsp;&nbsp;&nbsp;&nbsp;```php artisan cpx-seed:install``` (No existe en laravel)\
+### Command Mapping (The Laravel Way)
+#### Seeders-only commands:
+&nbsp;&nbsp;&nbsp;&nbsp;```php artisan cpx-seed:install``` (Not exist in laravel)\
 &nbsp;&nbsp;&nbsp;&nbsp;```php artisan make:cpx-seeder <name>``` = ```php artisan make:migration <name>```\
 &nbsp;&nbsp;&nbsp;&nbsp;```php artisan cpx-seed``` = ```php artisan migrate```\
 &nbsp;&nbsp;&nbsp;&nbsp;```php artisan cpx-seed:status``` = ```php artisan migrate:status```
 
-#### Comandos Laravel migrations + seeders:
+#### Laravel Migrations + CPX Seeders:
 &nbsp;&nbsp;&nbsp;&nbsp;```php artisan cpx-migrate --seed``` = ```php artisan migrate && php artisan cpx-seed```\
 &nbsp;&nbsp;&nbsp;&nbsp;```php artisan cpx-migrate:fresh --seed``` = ```php artisan migrate:fresh && php artisan cpx-seed```\
 &nbsp;&nbsp;&nbsp;&nbsp;```php artisan cpx-migrate:status``` = ```php artisan migrate:status && php artisan cpx-seed:status```
 
-## Uso
-1. Si no tiene el módulo de seeders incrementales crear la migración.\
+## Usage
+1. If you don't have the incremental seeders module, create the migration file for cpx-seeders.\
 &nbsp;&nbsp;&nbsp;&nbsp;```php artisan cpx-seed:install```
-2. Crear la tabla que registra los seeders en la base de datos.\
+2. Create the table that registers the seeders in the database.\
 &nbsp;&nbsp;&nbsp;&nbsp;```php artisan migrate```
-3. Crear archivo seeder. Por defecto se crea en el directorio **database/cpx_seeders**.\
+3. Create seeder file. By default it is created in the **database/cpx_seeders** directory.\
 &nbsp;&nbsp;&nbsp;&nbsp;```php artisan make:cpx-seeder User```
-4. Ejecutar el seeder con ```php artisan cpx-seed```. Este comando solo ejecuta los seeders que no se han ejecutado.
+4. Run the seeder with ```php artisan cpx-seed```. This command only runs the seeders that have not been executed.
 
-## Ejemplo
-Ruta: **database/cpx_seeders/YYYY_MM_DD_HHMMSS_user_seeder.php**
+## Example
+Path: **database/cpx_seeders/YYYY_MM_DD_HHMMSS_user_seeder.php**
 ```php
 <?php
 
@@ -57,9 +57,9 @@ class UserSeeder extends Seeder
 }
 ```
 
-### Nota:
-Si quieres tener varios seeders para una misma tabla, no puedes usar el mismo nombre de seeder. Debes usar un nombre diferente para cada seeder.
-Ejemplo:
-  Para la primera vez UserSeeder.
-  Para la segunda vez AddUserSellerSeeder.
-  Para la tercera vez AddUserAdminSeeder.
+### Note:
+If you want to have multiple seeders for the same table, you cannot use the same seeder name. You must use a different name for each seeder.
+Example:
+  For the first time UserSeeder.
+  For the second time AddUserSellerSeeder.
+  For the third time AddUserAdminSeeder.
