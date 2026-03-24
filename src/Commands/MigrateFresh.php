@@ -1,6 +1,6 @@
 <?php
 
-namespace Cpx\Seeders\Commands;
+namespace CpxProject\Seeders\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 
@@ -10,8 +10,8 @@ use Illuminate\Support\Str;
 
 class MigrateFresh extends GeneratorCommand
 {
-	protected $signature = 'cpx-migrate:fresh {--seed}';
-	protected $description = 'Call migrate:fresh. Params: {--seed} (php artisan migrate:fresh && php artisan cpx-seed)';
+	protected $signature = 'cpxproject-migrate:fresh {--seed}';
+	protected $description = 'Call migrate:fresh. Params: {--seed} (php artisan migrate:fresh && php artisan cpxproject-seed)';
 
 	public function handle()
 	{
@@ -28,7 +28,7 @@ class MigrateFresh extends GeneratorCommand
 		if ($this->option('seed')) {
 			$this->info("Starting database seeding...");
 
-			$this->call('cpx-seed');
+			$this->call('cpxproject-seed');
 
 			$this->info("Database seeding completed successfully.");
 		}

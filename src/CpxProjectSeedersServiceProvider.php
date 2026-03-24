@@ -1,17 +1,17 @@
 <?php
 
-namespace Cpx\Seeders;
+namespace CpxProject\Seeders;
 
 use Illuminate\Support\ServiceProvider;
-use Cpx\Seeders\Commands\Migrate;
-use Cpx\Seeders\Commands\MigrateFresh;
-use Cpx\Seeders\Commands\MigrateStatus;
-use Cpx\Seeders\Commands\SeederCreate;
-use Cpx\Seeders\Commands\SeederInstall;
-use Cpx\Seeders\Commands\SeederSeed;
-use Cpx\Seeders\Commands\SeederSeedStatus;
+use CpxProject\Seeders\Commands\Migrate;
+use CpxProject\Seeders\Commands\MigrateFresh;
+use CpxProject\Seeders\Commands\MigrateStatus;
+use CpxProject\Seeders\Commands\SeederCreate;
+use CpxProject\Seeders\Commands\SeederInstall;
+use CpxProject\Seeders\Commands\SeederSeed;
+use CpxProject\Seeders\Commands\SeederSeedStatus;
 
-class CpxSeedersServiceProvider extends ServiceProvider
+class CpxProjectSeedersServiceProvider extends ServiceProvider
 {
     public function boot()
     {

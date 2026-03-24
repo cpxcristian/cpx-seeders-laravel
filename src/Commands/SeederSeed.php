@@ -1,6 +1,6 @@
 <?php
 
-namespace Cpx\Seeders\Commands;
+namespace CpxProject\Seeders\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 
