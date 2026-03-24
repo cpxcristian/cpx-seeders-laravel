@@ -20,7 +20,7 @@ class SeederSeedStatus extends GeneratorCommand
 		$seeded = DB::table('cpx_seeders')->pluck('name', 'name')->toArray();
 		$lastBatch = DB::table('cpx_seeders')->max('batch') ?? 0;
 
-		$this->output->writeln("<question> INFO </question> Mostrando listado de seeders" );
+		$this->output->writeln("<question> INFO </question> Listing seeders" );
 		
 
 		$this->output->writeln("  Seeder name ".str_repeat('.', 146 - 20) ." Status" );
