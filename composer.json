@@ -1,5 +1,5 @@
 {
-    "name": "cpx/seeders",
+    "name": "cpxproject/seeders",
     "description": "Incremental seeders",
     "type": "library",
     "license": "MIT",
@@ -17,13 +17,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Cpx\\Seeders\\": "src/"
+            "CpxProject\\Seeders\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Cpx\\Seeders\\CpxSeedersServiceProvider"
+                "CpxProject\\Seeders\\CpxProjectSeedersServiceProvider"
             ]
         }
     }
