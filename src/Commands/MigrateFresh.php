@@ -10,8 +10,8 @@ use Illuminate\Support\Str;
 
 class MigrateFresh extends GeneratorCommand
 {
-	protected $signature = 'cpxproject-migrate:fresh {--seed}';
-	protected $description = 'Call migrate:fresh. Params: {--seed} (php artisan migrate:fresh && php artisan cpxproject-seed)';
+	protected $signature = 'cpx-migrate:fresh {--seed}';
+	protected $description = 'Call migrate:fresh. Params: {--seed} (php artisan migrate:fresh && php artisan cpx-seed)';
 
 	public function handle()
 	{
@@ -28,7 +28,7 @@ class MigrateFresh extends GeneratorCommand
 		if ($this->option('seed')) {
 			$this->info("Starting database seeding...");
 
-			$this->call('cpxproject-seed');
+			$this->call('cpx-seed');
 
 			$this->info("Database seeding completed successfully.");
 		}
