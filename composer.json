@@ -1,12 +1,12 @@
 {
-    "name": "cpxproject/seeders",
+    "name": "cpxproject/seeders-laravel",
     "description": "Run your seeders like migrations: once, safely, and tracked.",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Cristian",
-            "email": "cristian.mendoza@copixil.com"
+            "name": "Cristian Mendoza",
+            "email": "khris.cmd@gmail.com"
         }
     ],
     "require": {

@@ -28,6 +28,6 @@ class SeederInstall extends GeneratorCommand
 
 	protected function getStub()
 	{
-		return "";
+		return "";	
 	}
 }
